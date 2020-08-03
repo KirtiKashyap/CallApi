@@ -60,11 +60,6 @@ Displays additional information about the user.
   Use Mokito for mock an object
   Use Junit4 for android test runner
   
- 
-## Deliverables
-
-Please provide a zip file containing your project files and git folder or
-a link to your public repository.
 
 ## References
 Retrofit2 - http://square.github.io/retrofit/  
