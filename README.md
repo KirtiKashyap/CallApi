@@ -77,6 +77,9 @@ Here I use
 Android Studio 4.0.1
 Android Gradle Plugin version 4.0.1
 Gradle 6.1.1
+Minimum SdkVersion 19
+kotlin_version 1.3.72
+
 
 
 ## Project Pattern: MVVM
