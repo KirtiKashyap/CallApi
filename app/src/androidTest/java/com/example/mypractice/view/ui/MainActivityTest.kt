@@ -23,7 +23,8 @@ import org.junit.runner.RunWith
 class MainActivityTest {
     /** for activity test we need activity rule */
     @get:Rule
-    val mActivityRule: ActivityTestRule<MainActivity> = ActivityTestRule(MainActivity::class.java)
+    val mActivityRule: ActivityTestRule<MainActivity> = ActivityTestRule(
+        MainActivity::class.java)
     var mManiActivity: MainActivity? = null
 
     @Test

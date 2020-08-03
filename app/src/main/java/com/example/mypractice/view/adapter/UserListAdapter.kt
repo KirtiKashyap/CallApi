@@ -21,7 +21,7 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.ViewHolder>(), Filt
     /** Store a member variable for the search filtered users */
     private lateinit var userListFiltered: List<Item>
 
-    /** Create the RecyclerView row instance */
+    /** Create new views (invoked by the layout manager) */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding: UserItemBinding = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),
@@ -32,12 +32,11 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.ViewHolder>(), Filt
         )
     }
 
-    /** set the size of list*/
+    /** Return the size of your dataset (invoked by the layout manager) */
     override fun getItemCount(): Int {
         return if (::userListFiltered.isInitialized) userListFiltered.size else 0
     }
-
-    /** Bind the data to the RecyclerView row */
+/** Replace the contents of a view (invoked by the layout manager) */
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         /** Bind data to the ViewHolder class*/
         holder.bind(userListFiltered[position])
@@ -49,8 +48,7 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.ViewHolder>(), Filt
         userListFiltered = userList
         notifyDataSetChanged()
     }
-
-    /** custom ViewHolder for accessing to views */
+    /** Provide a reference to the views for each data item */
     class ViewHolder(private val binding: UserItemBinding) : RecyclerView.ViewHolder(binding.root) {
         /** ViewModel for adapter*/
         private val viewModel = AdapterViewModel()
