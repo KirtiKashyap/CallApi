@@ -50,6 +50,7 @@ Displays additional information about the user.
 ```
 
 ## Requirements and Constraints
+
   * Minimum Android API 19
   * Use RxJava(2) for handling async network calls
   * Use Retrofit2 for http requests
@@ -66,6 +67,17 @@ Retrofit2 - http://square.github.io/retrofit/
 RxJava - https://github.com/ReactiveX/RxJava
 Dagger- https://github.com/google/dagger
 StackExchange API - https://api.stackexchange.com/docs  
+
+## Compile project
+Download or clone project from the below link:
+https://github.com/KirtiKashyap/CandySpaceTest/tree/master
+open this project in your IDE.
+
+Here I use 
+Android Studio 4.0.1
+Android Gradle Plugin version 4.0.1
+Gradle 6.1.1
+
 
 ## Project Pattern: MVVM
 
