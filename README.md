@@ -53,11 +53,11 @@ Displays additional information about the user.
   * Minimum Android API 19
   * Use RxJava(2) for handling async network calls
   * Use Retrofit2 for http requests
-  * Use dagger2 for dependancy Injection
+  * Use dagger2 for dependency Injection
   * Use Kotlin instead of Java
   
   Testing Constraints
-  Use Mokito for mock an object
+  Use Mockito for mock an object
   Use Junit4 for android test runner
   
 
@@ -67,8 +67,21 @@ RxJava - https://github.com/ReactiveX/RxJava
 Dagger- https://github.com/google/dagger
 StackExchange API - https://api.stackexchange.com/docs  
 
-Pjoject Pattern: MVVM
+## Project Pattern: MVVM
 
 Model–view–viewmodel is a software architectural pattern that facilitates the separation of the development of the graphical user interface 
 be it via a markup language or GUI code – from the development of the business logic or back-end logic so that the view is not dependent on any specific model platform
 
+## Dagger
+Dagger is a fully static, compile-time dependency injection framework for both Java and Android.
+
+## Retrofit
+Retrofit is a REST Client for Java and Android. It makes it relatively easy to retrieve and upload JSON (or other structured data) 
+via a REST based webservice. In Retrofit you configure which converter is used for the data serialization. 
+Typically for JSON you use GSon, but you can add custom converters to process XML or other protocols. 
+Retrofit uses the OkHttp library for HTTP requests.
+
+## RxJava
+RxJava is a Java VM implementation of Reactive Extensions: a library for composing asynchronous and event-based programs by using observable sequences.
+It extends the observer pattern to support sequences of data/events and adds operators that allow you to compose sequences together decoratively
+while abstracting away concerns about things like low-level threading, synchronization, thread-safety and concurrent data structures.
