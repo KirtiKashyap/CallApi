@@ -14,6 +14,8 @@ interface RemoteApi {
      */
     @GET("users")
     fun getData(
+        @Query("page") page: Int,
+        @Query("pagesize") pagesize: Int,
         @Query("order") order: String,
         @Query("sort") sort: String,
         @Query("site") site: String

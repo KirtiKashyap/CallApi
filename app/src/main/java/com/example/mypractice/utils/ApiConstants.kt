@@ -11,6 +11,7 @@ class ApiConstants {
         const val SITE = "stackoverflow"
         const val SORT = "reputation"
         const val ORDER = "desc"
-
+        const val PAGE_SIZE = 10
+        const val FIRST_PAGE = 1
     }
 }

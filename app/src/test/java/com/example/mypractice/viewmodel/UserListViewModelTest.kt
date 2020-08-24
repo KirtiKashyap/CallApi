@@ -3,6 +3,7 @@ package com.example.mypractice.viewmodel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.mypractice.model.UserData
 import com.example.mypractice.network.RemoteApi
+import com.example.mypractice.utils.ApiConstants
 import com.nhaarman.mockitokotlin2.mock
 import io.reactivex.Observable
 import io.reactivex.android.plugins.RxAndroidPlugins
@@ -74,10 +75,12 @@ class UserListViewModelTest {
         val testObserver = TestObserver.create<UserData>()
         val observer = Observable.just(userData)
         observer.subscribe(testObserver)
-        testObserver.assertSubscribed();
+        testObserver.assertSubscribed()
 
         `when`(
             remoteApi.getData(
+                ApiConstants.FIRST_PAGE,
+                ApiConstants.PAGE_SIZE,
                 ORDER,
                 SORT,
                 SITE
@@ -85,7 +88,9 @@ class UserListViewModelTest {
         )
             .thenReturn(Observable.just(userData))
 
-        userListViewModel.postApi.getData(
+        userListViewModel.remoteApi.getData(
+            ApiConstants.FIRST_PAGE,
+            ApiConstants.PAGE_SIZE,
             ORDER,
             SORT,
             SITE
@@ -95,7 +100,6 @@ class UserListViewModelTest {
 
     @After
     fun tearDown() {
-        userListViewModel==null
         RxJavaPlugins.reset()
         RxAndroidPlugins.reset()
     }
